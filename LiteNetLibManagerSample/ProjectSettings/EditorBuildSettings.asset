@@ -4,4 +4,7 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/LiteNetLibManager/Demo/Scenes/Demo001.unity
+    guid: 132fc9d2ab70db0479fd72359cbc03b4
