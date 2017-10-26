@@ -12,6 +12,6 @@ public class UITestSpawn : MonoBehaviour
     public void OnClickSpawn()
     {
         var prefab = CustomNetworkManager.Singleton.Assets.registeringPrefabs[0].gameObject;
-        CustomNetworkManager.Singleton.Assets.NetworkSpawn(prefab, new Vector3(float.Parse(spawnX.text), float.Parse(spawnY.text), float.Parse(spawnZ.text)));
+        var newObject = CustomNetworkManager.Singleton.Assets.NetworkSpawn(prefab, new Vector3(float.Parse(spawnX.text), float.Parse(spawnY.text), float.Parse(spawnZ.text)));
     }
 }
