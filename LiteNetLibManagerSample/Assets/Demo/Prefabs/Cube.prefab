@@ -112,17 +112,17 @@ MonoBehaviour:
   test1:
     sendOptions: 3
     behaviour: {fileID: 114548602768695362}
-    variableIndex: 0
+    fieldId: 0
     value: 0
   test2:
     sendOptions: 3
     behaviour: {fileID: 114548602768695362}
-    variableIndex: 1
+    fieldId: 0
     value: 0
   test3:
     sendOptions: 3
     behaviour: {fileID: 114548602768695362}
-    variableIndex: 2
+    fieldId: 0
     value: 0
 --- !u!114 &114766318798814914
 MonoBehaviour:
@@ -138,6 +138,5 @@ MonoBehaviour:
   assetId: 8093ab4e4bc9fb149ad7bad8c885c3cd
   objectId: 0
   connectId: 0
-  behaviours:
-  - {fileID: 114548602768695362}
+  manager: {fileID: 0}
   reorderSceneObjectId: 0
