@@ -14,9 +14,9 @@ public class CustomNetworkBehaviour : LiteNetLibBehaviour
         RegisterSyncField("test1", test1);
         RegisterSyncField("test2", test2);
         RegisterSyncField("test3", test3);
-        RegisterNetFunction("test1", new LiteNetLibFunction<FunctionParameterInt>(ServerFunctionCallback));
-        RegisterNetFunction("test2", new LiteNetLibFunction<FunctionParameterInt>(TargetFunctionCallback));
-        RegisterNetFunction("test3", new LiteNetLibFunction<FunctionParameterInt>(AllFunctionCallback));
+        RegisterNetFunction("test1", new LiteNetLibFunction<NetFieldInt>(ServerFunctionCallback));
+        RegisterNetFunction("test2", new LiteNetLibFunction<NetFieldInt>(TargetFunctionCallback));
+        RegisterNetFunction("test3", new LiteNetLibFunction<NetFieldInt>(AllFunctionCallback));
         var syncFieldUI = FindObjectOfType<UITestSyncFields>();
         syncFieldUI.behaviour = this;
     }
@@ -39,17 +39,17 @@ public class CustomNetworkBehaviour : LiteNetLibBehaviour
         CallNetFunction("test3", FunctionReceivers.All, 3);
     }
 
-    public void ServerFunctionCallback(FunctionParameterInt param1)
+    public void ServerFunctionCallback(NetFieldInt param1)
     {
         Debug.LogError("ServerFunctionCallback(" + (int)param1 + ")");
     }
 
-    public void TargetFunctionCallback(FunctionParameterInt param1)
+    public void TargetFunctionCallback(NetFieldInt param1)
     {
         Debug.LogError("TargetFunctionCallback(" + (int)param1 + ")");
     }
 
-    public void AllFunctionCallback(FunctionParameterInt param1)
+    public void AllFunctionCallback(NetFieldInt param1)
     {
         Debug.LogError("AllFunctionCallback(" + (int)param1 + ")");
     }
