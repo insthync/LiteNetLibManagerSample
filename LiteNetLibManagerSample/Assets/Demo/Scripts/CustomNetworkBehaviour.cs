@@ -8,6 +8,7 @@ public class CustomNetworkBehaviour : LiteNetLibBehaviour
     public LiteNetLibSyncField<NetFieldInt, int> test1 = new LiteNetLibSyncField<NetFieldInt, int>();
     public SyncFieldInt test2;
     public SyncFieldInt test3;
+    public SyncListInt testList1;
 
     private void Awake()
     {
