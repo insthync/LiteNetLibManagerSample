@@ -5,7 +5,7 @@ using LiteNetLibHighLevel;
 
 public class CustomNetworkBehaviour : LiteNetLibBehaviour
 {
-    public SyncFieldInt test1;
+    public LiteNetLibSyncField<NetFieldInt, int> test1 = new LiteNetLibSyncField<NetFieldInt, int>();
     public SyncFieldInt test2;
     public SyncFieldInt test3;
 
