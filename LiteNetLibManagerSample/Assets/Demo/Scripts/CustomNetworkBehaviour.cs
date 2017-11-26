@@ -11,9 +11,6 @@ public class CustomNetworkBehaviour : LiteNetLibBehaviour
 
     private void Awake()
     {
-        RegisterSyncField("test1", test1);
-        RegisterSyncField("test2", test2);
-        RegisterSyncField("test3", test3);
         RegisterNetFunction("test1", new LiteNetLibFunction<NetFieldInt>(ServerFunctionCallback));
         RegisterNetFunction("test2", new LiteNetLibFunction<NetFieldInt>(TargetFunctionCallback));
         RegisterNetFunction("test3", new LiteNetLibFunction<NetFieldInt>(AllFunctionCallback));

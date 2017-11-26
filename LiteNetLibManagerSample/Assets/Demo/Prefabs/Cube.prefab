@@ -111,18 +111,21 @@ MonoBehaviour:
   behaviourIndex: 0
   test1:
     sendOptions: 3
+    forOwnerOnly: 0
     behaviour: {fileID: 114548602768695362}
     fieldId: 0
     value: 0
   test2:
     sendOptions: 3
+    forOwnerOnly: 0
     behaviour: {fileID: 114548602768695362}
-    fieldId: 0
+    fieldId: 1
     value: 0
   test3:
     sendOptions: 3
+    forOwnerOnly: 0
     behaviour: {fileID: 114548602768695362}
-    fieldId: 0
+    fieldId: 2
     value: 0
 --- !u!114 &114766318798814914
 MonoBehaviour:
@@ -139,4 +142,3 @@ MonoBehaviour:
   objectId: 0
   connectId: 0
   manager: {fileID: 0}
-  reorderSceneObjectId: 0
