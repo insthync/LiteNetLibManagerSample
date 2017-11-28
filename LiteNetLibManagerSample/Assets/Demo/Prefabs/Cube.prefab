@@ -109,24 +109,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behaviourIndex: 0
-  test1:
-    sendOptions: 3
-    forOwnerOnly: 0
-    behaviour: {fileID: 114548602768695362}
-    fieldId: 0
-    value: 0
   test2:
-    sendOptions: 3
-    forOwnerOnly: 0
     behaviour: {fileID: 114548602768695362}
-    fieldId: 1
+    elementId: 0
+    sendOptions: 3
+    sendRate: 1
+    forOwnerOnly: 0
     value: 0
   test3:
-    sendOptions: 3
-    forOwnerOnly: 0
     behaviour: {fileID: 114548602768695362}
-    fieldId: 2
+    elementId: 0
+    sendOptions: 3
+    sendRate: 0
+    forOwnerOnly: 0
     value: 0
+  testList1:
+    behaviour: {fileID: 0}
+    elementId: 0
+    forOwnerOnly: 0
 --- !u!114 &114766318798814914
 MonoBehaviour:
   m_ObjectHideFlags: 1
