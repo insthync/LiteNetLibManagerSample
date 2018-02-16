@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UITestSyncFields : MonoBehaviour {
+public class UITestSyncFields : MonoBehaviour
+{
     public CustomNetworkBehaviour behaviour;
+    public CustomNetworkBehaviour2 behaviour2;
+    public CustomNetworkBehaviour behaviour3;
     public InputField field1;
     public InputField field2;
     public InputField field3;
@@ -15,14 +18,14 @@ public class UITestSyncFields : MonoBehaviour {
     private void Update()
     {
         value1.text = ((int)behaviour.test1).ToString("N0");
-        value2.text = ((int)behaviour.test2).ToString("N0");
-        value3.text = ((int)behaviour.test3).ToString("N0");
+        value2.text = ((int)behaviour2.a).ToString("N0");
+        value3.text = ((int)behaviour3.test2).ToString("N0");
     }
 
     public void OnClickUpdateFields()
     {
         behaviour.test1.Value = int.Parse(field1.text);
-        behaviour.test2.Value = int.Parse(field2.text);
-        behaviour.test3.Value = int.Parse(field3.text);
+        behaviour2.a.Value = int.Parse(field2.text);
+        behaviour3.test2.Value = int.Parse(field3.text);
     }
 }

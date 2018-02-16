@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 23966332057450990}
   - component: {fileID: 114766318798814914}
   - component: {fileID: 114548602768695362}
+  - component: {fileID: 114532421998356538}
+  - component: {fileID: 114409807507355616}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -97,6 +99,72 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &114409807507355616
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1047954953657196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9b5c993fd0b09a4f86815f7c30a5b33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviourIndex: 0
+  syncFieldNames:
+  - test1
+  - test2
+  - test3
+  syncListNames:
+  - testList1
+  test2:
+    behaviour: {fileID: 0}
+    elementId: 0
+    sendOptions: 0
+    sendRate: 5
+    forOwnerOnly: 0
+    value: 0
+  test3:
+    behaviour: {fileID: 0}
+    elementId: 0
+    sendOptions: 0
+    sendRate: 5
+    forOwnerOnly: 0
+    value: 0
+  testList1:
+    behaviour: {fileID: 0}
+    elementId: 0
+    forOwnerOnly: 0
+--- !u!114 &114532421998356538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1047954953657196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88b9439b241bd2f408a1ea2f0ed9f119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviourIndex: 0
+  syncFieldNames:
+  - a
+  - z
+  syncListNames: []
+  z:
+    behaviour: {fileID: 0}
+    elementId: 0
+    sendOptions: 0
+    sendRate: 5
+    forOwnerOnly: 0
+    value: 0
+  a:
+    behaviour: {fileID: 0}
+    elementId: 0
+    sendOptions: 0
+    sendRate: 5
+    forOwnerOnly: 0
+    value: 0
 --- !u!114 &114548602768695362
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -109,22 +177,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   behaviourIndex: 0
+  syncFieldNames:
+  - test1
+  - test2
+  - test3
+  syncListNames:
+  - testList1
   test2:
     behaviour: {fileID: 114548602768695362}
-    elementId: 0
+    elementId: 1
     sendOptions: 3
     sendRate: 1
     forOwnerOnly: 0
     value: 0
   test3:
     behaviour: {fileID: 114548602768695362}
-    elementId: 0
+    elementId: 2
     sendOptions: 3
     sendRate: 0
     forOwnerOnly: 0
     value: 0
   testList1:
-    behaviour: {fileID: 0}
+    behaviour: {fileID: 114548602768695362}
     elementId: 0
     forOwnerOnly: 0
 --- !u!114 &114766318798814914
