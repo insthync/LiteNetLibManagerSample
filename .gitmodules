@@ -1,6 +1,3 @@
 [submodule "LiteNetLibManagerSample/Assets/LiteNetLibManager"]
 	path = LiteNetLibManagerSample/Assets/LiteNetLibManager
 	url = https://github.com/insthync/LiteNetLibManager.git
-[submodule "LiteNetLibManagerSample/Assets/LiteNetLibManagerSimpleCharacter"]
-	path = LiteNetLibManagerSample/Assets/LiteNetLibManagerSimpleCharacter
-	url = https://github.com/insthync/LiteNetLibManagerSimpleCharacter.git
