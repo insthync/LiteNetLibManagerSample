@@ -12,11 +12,17 @@ public class CustomNetworkBehaviour : LiteNetLibBehaviour
 
     private void Awake()
     {
+        test2.onChange += Test2_onChange;
         RegisterNetFunction("test1", new LiteNetLibFunction<NetFieldInt>(ServerFunctionCallback));
         RegisterNetFunction("test2", new LiteNetLibFunction<NetFieldInt>(TargetFunctionCallback));
         RegisterNetFunction("test3", new LiteNetLibFunction<NetFieldInt>(AllFunctionCallback));
         var syncFieldUI = FindObjectOfType<UITestSyncFields>();
         syncFieldUI.behaviour = this;
+    }
+
+    private void Test2_onChange(int obj)
+    {
+        Debug.Log("on change: (IsServer: " + IsServer + ")");
     }
 
     public void SendServerFunction()
