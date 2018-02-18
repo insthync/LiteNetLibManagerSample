@@ -6,5 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/LiteNetLibManager/Demo/Scenes/Demo001.unity
+    path: Assets/Demo/Scenes/Demo002.unity
+    guid: 589d5ab9883362b448d54ac119409a34
+  - enabled: 1
+    path: Assets/Demo/Scenes/Demo001.unity
     guid: 132fc9d2ab70db0479fd72359cbc03b4
