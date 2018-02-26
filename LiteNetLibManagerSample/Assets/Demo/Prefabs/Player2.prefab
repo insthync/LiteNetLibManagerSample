@@ -131,6 +131,8 @@ MonoBehaviour:
   behaviourIndex: 0
   syncFieldNames: []
   syncListNames: []
+  sendOptions: 0
+  sendRate: 5
 --- !u!114 &114639344395804338
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -145,7 +147,8 @@ MonoBehaviour:
   behaviourIndex: 0
   syncFieldNames: []
   syncListNames: []
-  sendInterval: 0.1
+  sendOptions: 2
+  sendRate: 10
   canClientSendResult: 1
   snapThreshold: 5
 --- !u!136 &136997447998302402

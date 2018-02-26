@@ -114,6 +114,8 @@ MonoBehaviour:
   behaviourIndex: 0
   syncFieldNames: []
   syncListNames: []
+  sendOptions: 0
+  sendRate: 5
   sendInterval: 0.05
   moveSpeed: 5
   jumpHeight: 2
