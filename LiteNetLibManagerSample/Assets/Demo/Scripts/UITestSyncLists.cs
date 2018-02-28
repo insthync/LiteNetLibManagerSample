@@ -51,7 +51,7 @@ public class UITestSyncLists : MonoBehaviour
         var list = behaviour.testList1;
         foreach (var item in list)
         {
-            Debug.LogError(item.Value + "\n");
+            Debug.LogError(item + "\n");
         }
     }
 }
