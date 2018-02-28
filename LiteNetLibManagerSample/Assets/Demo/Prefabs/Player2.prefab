@@ -118,6 +118,7 @@ MonoBehaviour:
   objectId: 0
   connectId: 0
   manager: {fileID: 0}
+  subscriberIds: 
 --- !u!114 &114616359925984348
 MonoBehaviour:
   m_ObjectHideFlags: 1

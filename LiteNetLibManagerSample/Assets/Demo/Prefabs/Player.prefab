@@ -100,6 +100,7 @@ MonoBehaviour:
   objectId: 0
   connectId: 0
   manager: {fileID: 0}
+  subscriberIds: 
 --- !u!114 &114196450657128172
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -115,7 +116,6 @@ MonoBehaviour:
   syncFieldNames: []
   syncListNames: []
   sendOptions: 0
-  sendRate: 5
   sendInterval: 0.05
   moveSpeed: 5
   jumpHeight: 2
