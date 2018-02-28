@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114639344395804338}
   - component: {fileID: 114616359925984348}
   - component: {fileID: 54548760268487456}
+  - component: {fileID: 114786314811759592}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -151,6 +152,25 @@ MonoBehaviour:
   sendInterval: 0.05
   canClientSendResult: 1
   snapThreshold: 5
+--- !u!114 &114786314811759592
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1256082744282652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d64c7b615199243b727eaa75d79574, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviourIndex: 0
+  syncFieldNames: []
+  syncListNames: []
+  sendOptions: 0
+  sendInterval: 0.1
+  range: 1
+  updateInterval: 1
+  checkMethod: 0
 --- !u!136 &136997447998302402
 CapsuleCollider:
   m_ObjectHideFlags: 1
