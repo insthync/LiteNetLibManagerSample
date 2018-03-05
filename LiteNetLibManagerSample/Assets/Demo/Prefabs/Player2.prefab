@@ -172,6 +172,9 @@ MonoBehaviour:
   range: 1
   updateInterval: 1
   checkMethod: 0
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!136 &136997447998302402
 CapsuleCollider:
   m_ObjectHideFlags: 1
