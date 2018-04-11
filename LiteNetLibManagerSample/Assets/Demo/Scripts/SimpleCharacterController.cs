@@ -17,7 +17,7 @@ public class SimpleCharacterController : LiteNetLibBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (IsLocalClient)
+        if (IsOwnerClient)
         {
             input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             if (Input.GetMouseButtonDown(0))
@@ -31,7 +31,7 @@ public class SimpleCharacterController : LiteNetLibBehaviour
 
     private void FixedUpdate()
     {
-        if (IsLocalClient)
+        if (IsOwnerClient)
         {
             if (agent == null)
                 transform.Translate(Vector3.ClampMagnitude(input, 1) * 2 * Time.fixedDeltaTime);
