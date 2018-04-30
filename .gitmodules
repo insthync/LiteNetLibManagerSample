@@ -4,3 +4,6 @@
 [submodule "LiteNetLibManagerSample/Assets/LiteNetLibManagerSimpleCharacter"]
 	path = LiteNetLibManagerSample/Assets/LiteNetLibManagerSimpleCharacter
 	url = https://github.com/insthync/LiteNetLibManagerSimpleCharacter.git
+[submodule "LiteNetLibManagerSample/Assets/Demo/unity-camera-and-input"]
+	path = LiteNetLibManagerSample/Assets/Demo/unity-camera-and-input
+	url = https://github.com/insthync/unity-camera-and-input.git
