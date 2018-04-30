@@ -204,7 +204,7 @@ MonoBehaviour:
   behaviourIndex: 0
   syncFieldNames: []
   syncListNames: []
-  sendOptions: 0
+  sendOptions: 2
   sendInterval: 0.1
   ownerClientCanSendTransform: 1
   ownerClientNotInterpolate: 0
