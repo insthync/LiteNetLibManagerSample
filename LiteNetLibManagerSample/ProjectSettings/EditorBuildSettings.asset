@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/LiteNetLibManagerSimpleCharacter/Scenes/Demo.unity
+    guid: aea5489a0602f2d409ca6f321cbb74a5
+  - enabled: 1
     path: Assets/Demo/Scenes/Offline.unity
     guid: fcad29fe03e50474ab8cf01c5f312848
   - enabled: 1
@@ -14,3 +17,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Demo/Scenes/Gameplay2.unity
     guid: 2688bf41b6f6bee4591aee29c9f560aa
+  m_configObjects: {}
