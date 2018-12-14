@@ -31,8 +31,8 @@ public class LiteNetLibDemoCharacter : LiteNetLibBehaviour
     public override void OnSetup()
     {
         base.OnSetup();
-        RegisterNetFunction("Shoot", new LiteNetLibFunction<NetFieldInt>((bulletType) => SpawnBullet(bulletType)));
-        RegisterNetFunction("RespawnAtPoint", new LiteNetLibFunction<NetFieldVector3>((position) => RespawnAtPoint(position)));
+        RegisterNetFunction("Shoot", new LiteNetLibFunction<int>((bulletType) => SpawnBullet(bulletType)));
+        RegisterNetFunction("RespawnAtPoint", new LiteNetLibFunction<Vector3>((position) => RespawnAtPoint(position)));
     }
 
     private void Update()
@@ -87,6 +87,6 @@ public class LiteNetLibDemoCharacter : LiteNetLibBehaviour
     void Respawn()
     {
         hp.Value = maxHp;
-        CallNetFunction("RespawnAtPoint", ConnectId, Manager.Assets.GetPlayerSpawnPosition());
+        CallNetFunction("RespawnAtPoint", ConnectionId, Manager.Assets.GetPlayerSpawnPosition());
     }
 }
