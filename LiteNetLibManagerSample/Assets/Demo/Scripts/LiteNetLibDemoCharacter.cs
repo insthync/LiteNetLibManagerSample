@@ -31,10 +31,10 @@ public class LiteNetLibDemoCharacter : LiteNetLibBehaviour
             hp.Value = maxHp;
     }
 
-    public override void OnSetOwnerClient()
+    public override void OnSetOwnerClient(bool isOwnerClient)
     {
-        base.OnSetOwnerClient();
-        if (IsOwnerClient)
+        base.OnSetOwnerClient(isOwnerClient);
+        if (isOwnerClient)
         {
             LiteNetLibDemoUIGameplay.Singleton.owningCharacter = this;
             var followCam = FindObjectOfType<FollowCameraControls>();
