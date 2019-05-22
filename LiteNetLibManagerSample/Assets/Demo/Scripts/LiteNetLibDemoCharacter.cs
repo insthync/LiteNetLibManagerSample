@@ -1,16 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using LiteNetLib;
 using LiteNetLibManager;
 
 public class LiteNetLibDemoCharacter : LiteNetLibBehaviour
 {
     public SyncFieldInt hp;
+    public SyncFieldString testString = new SyncFieldString()
+    {
+        syncMode = LiteNetLibSyncField.SyncMode.ClientMulticast,
+        deliveryMethod = DeliveryMethod.ReliableOrdered,
+    };
     public int bulletType;
     public int maxHp = 100;
     public float rotateSpeed = 150f;
     public float moveSpeed = 5f;
     public LiteNetLibDemoBullet[] bullets;
+    public Text testStringText;
 
     private void Awake()
     {
@@ -26,6 +34,12 @@ public class LiteNetLibDemoCharacter : LiteNetLibBehaviour
         }
         if (IsServer)
             hp.Value = maxHp;
+    }
+
+    public override void OnSetOwnerClient()
+    {
+        base.OnSetOwnerClient();
+        LiteNetLibDemoUIGameplay.Singleton.owningCharacter = this;
     }
 
     public override void OnSetup()
@@ -60,6 +74,9 @@ public class LiteNetLibDemoCharacter : LiteNetLibBehaviour
             LiteNetLibDemoUIGameplay.Singleton.SetActiveBulletType(bulletType);
             LiteNetLibDemoUIGameplay.Singleton.SetHp(hp.Value);
         }
+
+        testStringText.text = testString.Value;
+
         if (IsServer && hp.Value <= 0)
             Respawn();
     }
@@ -68,8 +85,8 @@ public class LiteNetLibDemoCharacter : LiteNetLibBehaviour
     {
         if (!IsServer || bulletType < 0 || bulletType >= bullets.Length)
             return;
-        var bullet = bullets[bulletType];
-        var bulletIdentity = Manager.Assets.NetworkSpawn(bullet.gameObject, transform.position, transform.rotation);
+        var bullet = Instantiate(bullets[bulletType], transform.position, transform.rotation);
+        var bulletIdentity = Manager.Assets.NetworkSpawn(bullet.gameObject);
         var bulletComp = bulletIdentity.GetComponent<LiteNetLibDemoBullet>();
         bulletComp.attacker = this;
     }
@@ -81,7 +98,7 @@ public class LiteNetLibDemoCharacter : LiteNetLibBehaviour
 
     public void Shoot()
     {
-        CallNetFunction("Shoot", FunctionReceivers.Server, bulletType);
+        CallNetFunction("Shoot", DeliveryMethod.ReliableOrdered, FunctionReceivers.Server, bulletType);
     }
 
     void Respawn()

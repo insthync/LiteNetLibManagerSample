@@ -5,12 +5,22 @@ using UnityEngine.UI;
 
 public class LiteNetLibDemoUIGameplay : MonoBehaviour {
     public static LiteNetLibDemoUIGameplay Singleton { get; private set; }
+    public LiteNetLibDemoCharacter owningCharacter;
     public Toggle[] activeBulletTypes;
     public Text hp;
+    public InputField input;
 
     private void Awake()
     {
         Singleton = this;
+    }
+
+    private void Update()
+    {
+        if (owningCharacter != null)
+        {
+            owningCharacter.testString.Value = input.text;
+        }
     }
 
     public void SetActiveBulletType(int bulletType)
