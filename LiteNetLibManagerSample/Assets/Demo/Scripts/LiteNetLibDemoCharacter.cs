@@ -27,11 +27,6 @@ public class LiteNetLibDemoCharacter : LiteNetLibBehaviour
 
     private void Start()
     {
-        if (IsOwnerClient)
-        {
-            var followCam = FindObjectOfType<FollowCameraControls>();
-            followCam.target = transform;
-        }
         if (IsServer)
             hp.Value = maxHp;
     }
@@ -39,7 +34,12 @@ public class LiteNetLibDemoCharacter : LiteNetLibBehaviour
     public override void OnSetOwnerClient()
     {
         base.OnSetOwnerClient();
-        LiteNetLibDemoUIGameplay.Singleton.owningCharacter = this;
+        if (IsOwnerClient)
+        {
+            LiteNetLibDemoUIGameplay.Singleton.owningCharacter = this;
+            var followCam = FindObjectOfType<FollowCameraControls>();
+            followCam.target = transform;
+        }
     }
 
     public override void OnSetup()
