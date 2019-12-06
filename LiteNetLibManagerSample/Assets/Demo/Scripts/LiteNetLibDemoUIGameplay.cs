@@ -9,6 +9,7 @@ public class LiteNetLibDemoUIGameplay : MonoBehaviour {
     public Toggle[] activeBulletTypes;
     public Text hp;
     public InputField input;
+    public InputField color;
 
     private void Awake()
     {
@@ -20,6 +21,7 @@ public class LiteNetLibDemoUIGameplay : MonoBehaviour {
         if (owningCharacter != null)
         {
             owningCharacter.testString.Value = input.text;
+            owningCharacter.GetComponentInChildren<LiteNetLibDemoChildrenBehaviour>().SetColor(color.text);
         }
     }
 
