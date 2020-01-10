@@ -13,7 +13,7 @@ public class LiteNetLibDemoCharacter : LiteNetLibBehaviour
         syncMode = LiteNetLibSyncField.SyncMode.ClientMulticast,
         deliveryMethod = DeliveryMethod.ReliableOrdered,
     };
-    [SyncField(syncMode = LiteNetLibSyncField.SyncMode.ServerToClients)]
+    [SyncField(syncMode = LiteNetLibSyncField.SyncMode.ServerToClients, hook = "TestHook")]
     public int testSyncField;
     public int bulletType;
     public int maxHp = 100;
@@ -33,9 +33,9 @@ public class LiteNetLibDemoCharacter : LiteNetLibBehaviour
             hp.Value = maxHp;
     }
 
-    private void TestHook()
+    private void TestHook(int value)
     {
-
+        Debug.LogError("[TestHook] " + value);
     }
 
     public override void OnSetOwnerClient(bool isOwnerClient)
