@@ -52,6 +52,14 @@ public class LiteNetLibDemoCharacter : LiteNetLibBehaviour
     public override void OnSetup()
     {
         base.OnSetup();
+        hp.onChange = (init, value) =>
+        {
+            Debug.LogError("[Hp change] " + init + " " + value);
+        };
+        testString.onChange = (init, value) =>
+        {
+            Debug.LogError("[TestString change] " + init + " " + value);
+        };
         RegisterNetFunction("RespawnAtPoint", new LiteNetLibFunction<Vector3>((position) => RespawnAtPoint(position)));
     }
 
