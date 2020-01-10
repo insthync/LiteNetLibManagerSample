@@ -10,7 +10,7 @@ public class LiteNetLibDemoCharacter : LiteNetLibBehaviour
     public SyncFieldInt hp;
     public SyncFieldString testString = new SyncFieldString()
     {
-        syncMode = LiteNetLibSyncField.SyncMode.ClientMulticast,
+        syncMode = SyncFieldMode.ClientMulticast,
         deliveryMethod = DeliveryMethod.ReliableOrdered,
     };
     public int bulletType;
