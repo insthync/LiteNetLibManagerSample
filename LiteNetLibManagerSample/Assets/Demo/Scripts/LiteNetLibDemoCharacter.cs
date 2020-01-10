@@ -45,8 +45,13 @@ public class LiteNetLibDemoCharacter : LiteNetLibBehaviour
     public override void OnSetup()
     {
         base.OnSetup();
-        RegisterNetFunction("Shoot", new LiteNetLibFunction<int>((bulletType) => SpawnBullet(bulletType)));
         RegisterNetFunction("RespawnAtPoint", new LiteNetLibFunction<Vector3>((position) => RespawnAtPoint(position)));
+    }
+
+    [NetFunction]
+    void Shoot(int bulletType)
+    {
+        SpawnBullet(bulletType);
     }
 
     private void Update()
