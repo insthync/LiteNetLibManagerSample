@@ -10,9 +10,11 @@ public class LiteNetLibDemoCharacter : LiteNetLibBehaviour
     public SyncFieldInt hp;
     public SyncFieldString testString = new SyncFieldString()
     {
-        syncMode = SyncFieldMode.ClientMulticast,
+        syncMode = LiteNetLibSyncField.SyncMode.ClientMulticast,
         deliveryMethod = DeliveryMethod.ReliableOrdered,
     };
+    [SyncField(syncMode = LiteNetLibSyncField.SyncMode.ServerToClients)]
+    public int testSyncField;
     public int bulletType;
     public int maxHp = 100;
     public float rotateSpeed = 150f;
@@ -29,6 +31,11 @@ public class LiteNetLibDemoCharacter : LiteNetLibBehaviour
     {
         if (IsServer)
             hp.Value = maxHp;
+    }
+
+    private void TestHook()
+    {
+
     }
 
     public override void OnSetOwnerClient(bool isOwnerClient)
