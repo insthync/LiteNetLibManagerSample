@@ -49,7 +49,7 @@ public class LiteNetLibDemoCharacter : LiteNetLibBehaviour
     }
 
     [NetFunction]
-    void Shoot(int bulletType)
+    protected virtual void Shoot(int bulletType)
     {
         SpawnBullet(bulletType);
     }

@@ -90,9 +90,9 @@ GameObject:
   - component: {fileID: 33724541718307680}
   - component: {fileID: 136328899194963170}
   - component: {fileID: 23986924901886400}
-  - component: {fileID: 114085885986301632}
   - component: {fileID: 114639300694453402}
   - component: {fileID: 114249378659174506}
+  - component: {fileID: 2314746586935906879}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -176,48 +176,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &114085885986301632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1961225045349670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7c5ea090b02c75244a5d3390a71c89b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  behaviourIndex: 0
-  sendOptions: 0
-  sendInterval: 0.1
-  hp:
-    behaviour: {fileID: 0}
-    elementId: 0
-    deliveryMethod: 0
-    sendInterval: 0.1
-    alwaysSync: 0
-    doNotSyncInitialDataImmediately: 0
-    syncMode: 0
-    value: 0
-  testString:
-    behaviour: {fileID: 0}
-    elementId: 0
-    deliveryMethod: 3
-    sendInterval: 0.1
-    alwaysSync: 0
-    doNotSyncInitialDataImmediately: 0
-    syncMode: 2
-    value: 
-  bulletType: 0
-  maxHp: 100
-  rotateSpeed: 150
-  moveSpeed: 5
-  bullets:
-  - {fileID: 114424868124195580, guid: 150d1bd91a5bdeb46922237023438d17, type: 3}
-  - {fileID: 114261677853326616, guid: 2a31e7a9fee371844a1eb18a3b5c9b27, type: 3}
-  - {fileID: 114165597431712020, guid: 6576311347de002418a89b748e6d4926, type: 3}
-  testStringText: {fileID: 6554337867238925283}
 --- !u!114 &114639300694453402
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -263,6 +221,48 @@ MonoBehaviour:
   syncRotationX: 1
   syncRotationY: 0
   syncRotationZ: 1
+--- !u!114 &2314746586935906879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1961225045349670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a29c1d027e0afd04a8f1002d33d496c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviourIndex: 0
+  sendOptions: 0
+  sendInterval: 0.1
+  hp:
+    behaviour: {fileID: 0}
+    elementId: 0
+    deliveryMethod: 0
+    sendInterval: 0.1
+    alwaysSync: 0
+    doNotSyncInitialDataImmediately: 0
+    syncMode: 0
+    value: 100
+  testString:
+    behaviour: {fileID: 0}
+    elementId: 0
+    deliveryMethod: 3
+    sendInterval: 0.1
+    alwaysSync: 0
+    doNotSyncInitialDataImmediately: 0
+    syncMode: 2
+    value: Test
+  bulletType: 0
+  maxHp: 100
+  rotateSpeed: 150
+  moveSpeed: 5
+  bullets:
+  - {fileID: 114424868124195580, guid: 150d1bd91a5bdeb46922237023438d17, type: 3}
+  - {fileID: 114261677853326616, guid: 2a31e7a9fee371844a1eb18a3b5c9b27, type: 3}
+  - {fileID: 114165597431712020, guid: 6576311347de002418a89b748e6d4926, type: 3}
+  testStringText: {fileID: 6554337867238925283}
 --- !u!1 &2589481552359092640
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +449,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb30ec286221f0446a2950c7140bfa1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  behaviourIndex: 0
+  sendOptions: 0
+  sendInterval: 0.1
   changingColorImage: {fileID: 3876168389596483168}
   color:
     behaviour: {fileID: 0}
