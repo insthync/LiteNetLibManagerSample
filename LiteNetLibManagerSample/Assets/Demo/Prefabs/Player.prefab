@@ -254,6 +254,9 @@ MonoBehaviour:
     doNotSyncInitialDataImmediately: 0
     syncMode: 2
     value: Test
+  testSyncField: 0
+  testSyncField2: 2147483647
+  testSyncField3_Value: 9223372036854775807
   bulletType: 0
   maxHp: 100
   rotateSpeed: 150

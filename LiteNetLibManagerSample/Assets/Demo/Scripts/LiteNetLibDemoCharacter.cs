@@ -7,6 +7,12 @@ using LiteNetLibManager;
 
 public class LiteNetLibDemoCharacter : LiteNetLibBehaviour
 {
+    public enum TestEnum
+    {
+        EnumA = int.MaxValue,
+        EnumB = int.MinValue
+    }
+
     public SyncFieldInt hp;
     public SyncFieldString testString = new SyncFieldString()
     {
@@ -15,6 +21,11 @@ public class LiteNetLibDemoCharacter : LiteNetLibBehaviour
     };
     [SyncField(syncMode = LiteNetLibSyncField.SyncMode.ServerToClients, hook = "TestHook")]
     public int testSyncField;
+    [SyncField(syncMode = LiteNetLibSyncField.SyncMode.ServerToClients, hook = "TestHook2")]
+    public TestEnum testSyncField2 = TestEnum.EnumA;
+    [SyncField(syncMode = LiteNetLibSyncField.SyncMode.ServerToClients, hook = "TestHook3")]
+    public PackedLong testSyncField3 = new PackedLong(long.MaxValue);
+    public long testSyncField3_Value = long.MaxValue;
     public int bulletType;
     public int maxHp = 100;
     public float rotateSpeed = 150f;
@@ -33,9 +44,28 @@ public class LiteNetLibDemoCharacter : LiteNetLibBehaviour
             hp.Value = maxHp;
     }
 
+    private void LateUpdate()
+    {
+        if (!IsServer)
+            return;
+
+        if (testSyncField3 != testSyncField3_Value)
+            testSyncField3 = testSyncField3_Value;
+    }
+
     private void TestHook(int value)
     {
         Debug.LogError("[TestHook] " + value);
+    }
+
+    private void TestHook2(TestEnum value)
+    {
+        Debug.LogError("[TestHook2] " + value);
+    }
+
+    private void TestHook3(PackedLong value)
+    {
+        Debug.LogError("[TestHook3] " + (long)value);
     }
 
     public override void OnSetOwnerClient(bool isOwnerClient)
